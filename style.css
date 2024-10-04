@@ -225,7 +225,7 @@ body {
     }
 }
 
-/* @media (max-width: 387px) {
+@media (max-width: 350px) {
     .Valentines-day-1 {
         font-size: 5px;
     }
@@ -282,4 +282,4 @@ body {
         top: 0;
         left: -80px;
     }
-} */
+}
