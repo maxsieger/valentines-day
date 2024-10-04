@@ -3,6 +3,7 @@
 .wrapper {
     display: flex;
     justify-content: center;
+    left: 50%;
 }
 
 .container {
@@ -10,6 +11,10 @@
     animation-name: chang-margin;
     animation-iteration-count: infinite;
     animation-duration: 5s;
+}
+
+.container_two {
+    margin-top: 0;
 }
 
 @keyframes chang-margin {
@@ -40,7 +45,6 @@ body {
     transform: rotate(45deg);
     position: relative; 
     margin: auto 0;
-    align-items: center;
 }
 
 .heart::before,
@@ -89,37 +93,26 @@ body {
     font-weight: 400;
     font-style: normal;
     color: rgb(255, 246, 247);
-    text-align: center;
     font-size: 35px; /* Можете изменить размер шрифта по желанию */
     z-index: 1; /* Убедитесь, что z-index больше, чем z-index сердца */
     position: relative; /* Позиционируем текст абсолютным образом */
-    top: 40%; /* Центрируем текст по вертикали */
-    left: 50%; /* Центрируем текст по горизонтали */
+    top: 45%; /* Центрируем текст по вертикали */
+    left: 50%;
+    text-align: center;
     transform: translate(-50%, -50%); /* Смещение для точного центрирования */
-    text-align: center; /* Центрируем текст */
 }
 
-.Valentines-day-1 {
-    font-family: "Pacifico", cursive;
-    font-weight: 400;
-    
-    font-style: normal;
-    color: rgb(255, 246, 247);
-    font-size: 15px; /* Можете изменить размер шрифта по желанию */
-    z-index: 1; /* Убедитесь, что z-index больше, чем z-index сердца */
-    position: relative; /* Позиционируем текст абсолютным образом */
-    top: 25%; /* Центрируем текст по вертикали */
-    left: 3%; /* Центрируем текст по горизонтали */
-    transform: translate(-50%, -50%); /* Смещение для точного центрирования */
-    text-align: center; /* Центрируем текст */
-}
 
 @media (max-width: 530px) {
+
+    .container_two {
+        margin-top: 50px;
+    }
     .Valentines-day-1 {
         font-size: 15px;
     }
     .Valentines-day {
-        font-size: 25px;
+        font-size: 22px;
     }
 
     .heart {
@@ -229,5 +222,64 @@ body {
     .heart::after {
         top: 0;
         left: -100px;
+    }
+}
+
+@media (max-width: 387px) {
+    .Valentines-day-1 {
+        font-size: 5px;
+    }
+    .Valentines-day {
+        font-size: 15px;
+    }
+
+    .heart {
+        width: 130px; 
+        height: 130px; 
+        background-color: #FF145B; 
+        transform: rotate(45deg);
+        position: relative; 
+        margin: auto 0;
+    }
+    
+    .heart::before,
+    .heart::after {
+        content : ''; 
+        display: block;
+        width: 130px;
+        height: 130px;
+        background-color: #FF145B;
+        border-radius: 50%; 
+        position: absolute;
+    }
+    
+    .heart::before {
+        content : ''; 
+        display: block;
+        width: 130px;
+        height: 150px;
+        background-color: #FF145B;
+        border-radius: 50%; 
+        position: absolute;
+    }
+    
+    .heart::after {
+        content : ''; 
+        display: block;
+        width: 150px;
+        height: 130px;
+        background-color: #FF145B;
+        border-radius: 50%; 
+        position: absolute;
+    }
+    
+    .heart::before {
+        top: -80px;
+        left: 0;
+    }
+    
+    .heart::after {
+        top: 0;
+        left: -80px;
     }
 }
